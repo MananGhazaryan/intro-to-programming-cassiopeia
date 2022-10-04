@@ -1,0 +1,108 @@
+* {
+    background-color: rgb(237, 232, 216);
+    color:#40406e
+}
+
+body {
+    padding: 30px;
+    padding-top: 15px;
+}
+
+
+.greeting {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 500px;
+    border-width: 3px;
+    border: #0099CC; 
+    border-radius: 30px; 
+    border-style: solid;    
+    width: fit-content;
+}
+
+
+.about,
+.experience,
+.blocks {
+    color: #aa54b5;
+    padding: 10px;
+    margin-left: 35px;
+    border-width: 3px;
+    border-color: #0099CC; 
+    border-style: solid;
+    width: fit-content;
+}
+
+.blocks {
+    margin: 10px;
+}
+
+h1,
+h2 {
+    font-size: 30px;
+    font-family:'Courier New';
+    font-weight:lighter;
+    color: #b8a900;
+}
+
+footer {
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 600px;
+    border-width: 3px;
+    border: white;
+    border-radius: 30px; 
+    border-style: solid;    
+    width: fit-content;
+}
+
+button { 
+    background-color: #0099CC; 
+    padding: 12px 20px;
+    border-radius: 30px; 
+    text-transform: uppercase; 
+    color: white;
+}
+
+
+.welcome {
+text-align: center;    
+color: #aa54b5;
+}
+
+.footerBackground {
+    background-color: #0099CC; 
+}
+
+.messageBlocks {
+    padding: 10px;
+    margin: 10px;
+    border-width: 3px;
+    border-color: #40406e;
+    border-style: solid;
+    width: fit-content;
+}
+
+label {
+    color: #0099CC; 
+    font-size: 20px;
+}
+   
+
+input, 
+textarea {
+    font-size: 15px;
+    color: #40406e;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+
