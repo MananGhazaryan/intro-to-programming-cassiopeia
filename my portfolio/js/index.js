@@ -1,8 +1,9 @@
-let myName = "Manan";
+let myName = "Manan ";
 let today = new Date();
 let thisYear = today.getFullYear();  
 let footer = document.querySelector('footer');  
-let copyright = document.createElement('p'); 
+let copyright = document.createElement('p');
+copyright.classList.add('footerBackground'); 
 copyright.innerHTML = myName.concat('', thisYear);
 footer.appendChild(copyright); 
 
@@ -13,6 +14,7 @@ let skillsList = skillsSection.querySelector('ul');
 for (i=0; i<skills.length; i++){
     let skill = document.createElement('li');
     skill.innerHTML = skills[i];
+    skill.classList.add('blocks');
     skillsList.appendChild(skill);
 }
 
@@ -55,6 +57,7 @@ console.log(`name: ${name}, email: ${email}, message: ${message}`);
 newMessage.appendChild(removeButton); 
 newMessage.appendChild(editButton);  
 messageList.appendChild(newMessage);
+newMessage.classList.add('messageBlocks');
 
 messageForm.reset(); 
 }); 
