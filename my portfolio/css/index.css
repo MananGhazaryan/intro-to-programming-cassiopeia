@@ -24,7 +24,7 @@ body {
 .about,
 .experience,
 .blocks {
-    color: #aa54b5;
+    color: #9c4ca7;
     padding: 10px;
     margin-left: 35px;
     border-width: 3px;
@@ -105,4 +105,39 @@ textarea {
     height: 150px;
 }
 
+.menu {
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    justify-content:flex-end;
+    font-size: larger;
+}
+
+.skillsrow {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-direction: row;
+}
+
+.skillsrow > * {
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    body {
+      background: green;
+    }
+  }
 
