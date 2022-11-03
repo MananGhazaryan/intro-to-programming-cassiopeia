@@ -1,10 +1,11 @@
-let myName = "Manan ";
+let myName = " Manan Ghazaryan ";
+let sign = '&copy';
 let today = new Date();
 let thisYear = today.getFullYear();  
 let footer = document.querySelector('footer');  
 let copyright = document.createElement('p');
 copyright.classList.add('footerBackground'); 
-copyright.innerHTML = myName.concat('', thisYear);
+copyright.innerHTML = sign.concat(myName, thisYear);
 footer.appendChild(copyright); 
 
 let skills = ['html', 'css', 'js']; 
@@ -61,3 +62,22 @@ newMessage.classList.add('messageBlocks');
 
 messageForm.reset(); 
 }); 
+
+let githubRequest = new XMLHttpRequest(); 
+githubRequest.addEventListener('load', function() {
+    let repositories = JSON.parse(this.response);
+    console.log(repositories);
+    let projectsSection = document.getElementById('projects');
+let projectList = projectsSection.querySelector('ul');
+
+for (i = 0; i < repositories.length; i++) {
+    let project = document.createElement('li'); 
+    project.innerText = repositories[i].name  
+    projectList.appendChild(project); 
+}
+}); 
+githubRequest.open('GET', 'https://api.github.com/users/MananGhazaryan/repos');
+githubRequest.onload = function() {
+    console.log(githubRequest.responseText);
+};
+githubRequest.send();
