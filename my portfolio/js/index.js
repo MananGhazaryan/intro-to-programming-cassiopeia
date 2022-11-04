@@ -63,21 +63,37 @@ newMessage.classList.add('messageBlocks');
 messageForm.reset(); 
 }); 
 
-let githubRequest = new XMLHttpRequest(); 
-githubRequest.addEventListener('load', function() {
-    let repositories = JSON.parse(this.response);
-    console.log(repositories);
-    let projectsSection = document.getElementById('projects');
-let projectList = projectsSection.querySelector('ul');
+// let githubRequest = new XMLHttpRequest(); 
+// githubRequest.addEventListener('load', function() {
+//     let repositories = JSON.parse(this.response);
+//     console.log(repositories);
+//     let projectsSection = document.getElementById('projects');
+// let projectList = projectsSection.querySelector('ul');
 
-for (i = 0; i < repositories.length; i++) {
-    let project = document.createElement('li'); 
-    project.innerText = repositories[i].name  
-    projectList.appendChild(project); 
-}
-}); 
-githubRequest.open('GET', 'https://api.github.com/users/MananGhazaryan/repos');
-githubRequest.onload = function() {
-    console.log(githubRequest.responseText);
-};
-githubRequest.send();
+// for (i = 0; i < repositories.length; i++) {
+//     let project = document.createElement('li'); 
+//     project.innerText = repositories[i].name  
+//     projectList.appendChild(project); 
+// }
+// }); 
+
+// githubRequest.open('GET', 'https://api.github.com/users/MananGhazaryan/repos');
+// githubRequest.onload = function() {
+//     console.log(githubRequest.responseText);
+// };
+// githubRequest.send();
+
+fetch('https://api.github.com/users/MananGhazaryan/repos')
+  .then(function(response) {
+    return response.json();     
+})
+  .then(function(response) {
+    let projectsSection = document.getElementById('projects');
+    let projectList = projectsSection.querySelector('ul');
+
+    for (i = 0; i < response.length; i++) {
+        let project = document.createElement('li'); 
+        project.innerText = response[i].name  
+        projectList.appendChild(project); 
+    }
+});  
