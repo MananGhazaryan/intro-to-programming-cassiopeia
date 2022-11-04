@@ -63,6 +63,7 @@ newMessage.classList.add('messageBlocks');
 messageForm.reset(); 
 }); 
 
+// old code
 // let githubRequest = new XMLHttpRequest(); 
 // githubRequest.addEventListener('load', function() {
 //     let repositories = JSON.parse(this.response);
