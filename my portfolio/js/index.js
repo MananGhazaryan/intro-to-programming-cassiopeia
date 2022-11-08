@@ -8,6 +8,7 @@ copyright.classList.add('footerBackground');
 copyright.innerHTML = sign.concat(myName, thisYear);
 footer.appendChild(copyright); 
 
+// Skills list
 let skills = ['html', 'css', 'js']; 
 let skillsSection = document.getElementById('skills');
 let skillsList = skillsSection.querySelector('ul');
@@ -34,7 +35,9 @@ console.log(`name: ${name}, email: ${email}, message: ${message}`);
     let messageList = messageSection.querySelector('ul');
     let newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a><span> wrote: ${message}</span>`;
-   
+
+
+    // Remove and edit buttons 
     let removeButton = document.createElement('button');
     removeButton.setAttribute('type', 'button'); 
     removeButton.innerText = 'Remove';
@@ -55,46 +58,30 @@ console.log(`name: ${name}, email: ${email}, message: ${message}`);
     messageElement.value = message; 
 });
 
-newMessage.appendChild(removeButton); 
-newMessage.appendChild(editButton);  
-messageList.appendChild(newMessage);
-newMessage.classList.add('messageBlocks');
-
-messageForm.reset(); 
+    newMessage.appendChild(removeButton); 
+    newMessage.appendChild(editButton);  
+    messageList.appendChild(newMessage);
+    messageSection.setAttribute('style', 'display: block');
+    newMessage.classList.add('messageBlocks');
+    messageForm.reset(); 
 }); 
 
-// old code
-// let githubRequest = new XMLHttpRequest(); 
-// githubRequest.addEventListener('load', function() {
-//     let repositories = JSON.parse(this.response);
-//     console.log(repositories);
-//     let projectsSection = document.getElementById('projects');
-// let projectList = projectsSection.querySelector('ul');
+// Fetch API
+fetch("https://api.github.com/users/MananGhazaryan/repos")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
 
-// for (i = 0; i < repositories.length; i++) {
-//     let project = document.createElement('li'); 
-//     project.innerText = repositories[i].name  
-//     projectList.appendChild(project); 
-// }
-// }); 
-
-// githubRequest.open('GET', 'https://api.github.com/users/MananGhazaryan/repos');
-// githubRequest.onload = function() {
-//     console.log(githubRequest.responseText);
-// };
-// githubRequest.send();
-
-fetch('https://api.github.com/users/MananGhazaryan/repos')
-  .then(function(response) {
-    return response.json();     
-})
-  .then(function(response) {
-    let projectsSection = document.getElementById('projects');
-    let projectList = projectsSection.querySelector('ul');
-
-    for (i = 0; i < response.length; i++) {
-        let project = document.createElement('li'); 
-        project.innerText = response[i].name  
-        projectList.appendChild(project); 
+//Display repositories in list
+projectSection = document.getElementById("projects");
+projectList = projectSection.querySelector("ul");
+    for (let i = 0; i < data.length; i++) {
+      project = document.createElement("li");
+      projectLink = document.createElement("a");
+      projectLink.classList.add("gitLinks")
+      projectLink.setAttribute("href", data[i].html_url);
+      projectLink.innerText = data[i].name;
+      project.appendChild(projectLink);
+      projectList.appendChild(project);
     }
-});  
+});
