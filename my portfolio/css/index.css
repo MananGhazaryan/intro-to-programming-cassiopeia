@@ -1,99 +1,77 @@
-* {
-    background-color: #fef9f8;
-    color:#40406e
-}
-
 body {
-    padding: 30px;
+    padding-right: 200px;
+    padding-left: 200px;
     padding-top: 15px;
-    
+    padding-bottom: 15px;  
+    font-size: 20px;  
+} 
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-
-.greeting {
-    font-size: 20px;
-    padding: 10px;
-    margin-left: 500px;
-    border-width: 3px;
-    border: #0099CC; 
-    border-radius: 30px; 
-    border-style: solid;    
-    width: fit-content;
+.nav {
+    display: flex; 
+    justify-content: flex-end;
+    gap: 2rem;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-
-.about,
-.experience,
-.blocks {
-    color: #9c4ca7;
-    padding: 10px;
-    margin-left: 35px;
-    border-width: 3px;
-    border-color: #0099CC; 
-    border-style: solid;
-    width: fit-content;
+.menubuttons {
+    text-decoration: none;
+    color: #000;
+    font-size: larger;
 }
 
-.blocks {
-    margin: 10px;
+.menubuttons:hover {
+    color: #ff5ea2;
 }
 
-h1,
-h2 {
-    font-size: 30px;
-    font-family:'Courier New';
-    font-weight:lighter;
-    color: #b8a900;
-}
-
-footer {
-    font-size: 20px;
-    padding: 10px;
-    margin-left: 600px;
-    border-width: 3px;
-    border: white;
-    border-radius: 30px; 
-    border-style: solid;    
-    width: fit-content;
-}
-
-button { 
-    background-color: #0099CC; 
+button {
     padding: 12px 20px;
+    border: 0;
     border-radius: 30px; 
     text-transform: uppercase; 
     color: white;
+    width: 100px;
+    background: #ff3527;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-
-.welcome {
-text-align: center;    
-color: #aa54b5;
+h2 {
+    color: #fb5283;
 }
 
-.footerBackground {
-    background-color: #0099CC; 
+.mediaFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.messageBlocks {
+.mediaNav {
+    display: flex;
+    list-style: none;
+}
+
+.media {
     padding: 10px;
-    margin: 10px;
-    border-width: 3px;
-    border-color: #40406e;
-    border-style: solid;
-    width: fit-content;
+    color: #000;
+    font-size: 25px;
 }
 
-label {
-    color: #0099CC; 
-    font-size: 20px;
+.media:hover {
+    color: #ff5ea2;
 }
-   
 
 input, 
 textarea {
     font-size: 15px;
-    color: #40406e;
+    color: #fb5283;
     width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -103,42 +81,43 @@ textarea {
 }
 
 textarea {
-    height: 150px;
-}
-
-.menu {
-    display: flex; 
-    margin: 0;
-    padding: 0;
-    gap: 1rem;
-    list-style: none;
-}
-
-.menu {
-    display: flex;
-    justify-content:flex-end;
-    font-size: larger;
+    height: 100px;
 }
 
 .skillsrow {
     display: flex;
     list-style: none;
-    gap: 2rem;
     flex-direction: row;
 }
 
-.skillsrow > * {
-    flex: 1;
+.blocks {
+    padding: 10px;
+    margin-left: 35px;
+    border-width: 3px;
+    border-color: #fb5283; 
+    border-style: solid;
+    width: fit-content;
 }
 
-form {
+input {
     display: flex;
     flex-direction: column;
 }
 
-@media (max-width: 900px) {
-    body {
-      background: green;
-    }
-  }
+.gitLinks {
+    text-decoration: none;
+    color: #000;
+    font-size: larger;
+}
 
+.gitLinks:hover {
+    color: #ff5ea2;
+} 
+
+@media only screen and (max-width: 800px) {
+    .skillsrow {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;    
+    }
+  } 

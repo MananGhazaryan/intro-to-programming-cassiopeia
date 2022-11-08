@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manan</title>
     <link rel = 'stylesheet' href = 'css/index.css'> 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -15,58 +15,70 @@
         }
     </style>
 </head>
+
 <body>
     <div class="menu">
-        <li> <a class="menubuttons" href="index.html">About</a></li>
-        <li> <a class="menubuttons" href="index.html">Experience</a></li>
-        <li> <a class="menubuttons" href="index.html">Skills</a></li>
-        <li> <a class="menubuttons" href="index.html">Connect</a></li>
+    <h3 class="myName">Manan Ghazaryan</h3>
+        <nav class="nav">
+            <li> <a class="menubuttons" href="#aboutme">About</a></li>
+            <li> <a class="menubuttons" href="#myexperience">Experience</a></li>
+            <li> <a class="menubuttons" href="#skills">Skills</a></li>
+            <li> <a class="menubuttons" href="#projects">Projects</a></li>
+            <li> <a class="menubuttons" href="#leaveMessage">Connect</a></li>
+        </nav>
     </div>
-    <h1 class = 'welcome'>Welcome!</h1>
-    <h3 class="greeting">My name is Manan Ghazaryan.</h3>
- <div> 
-    <section><h1>About me:</h1> 
-<p class="about">I'm Manan from Armenia. I'm 26 years old and live in Atlanta, GA.</p> </section> 
-<section><h1>My experience:</h1> 
- <p class="experience">I've been a teacher for last few years. I've never code before. I started learning coding with Code the Dream in July, 2022.</p></section>
- <section id = "skills">
-    <h2>Skills:</h2>
-        <ul class="skillsrow"></ul>
- </section>
- <section id="projects">
-    <h2>Projects</h2>
-    <ul></ul>
- </section>
- <section><h1>Connect:</h1> 
-    <ul> 
-        <li> ghazaryan17@yandex.ru</li>
-        <li>instagram: man.kazaryan</li>
-        <li>gitHub: MananGhazaryan</li> 
-    </ul></section>
-</div>
+  
 
-    <section>
-    <h2>Leave a Message</h2>
-    <form name ='leave_message'>
-        <label for ='name'>Name</label><br>
-            <input type="text" name="name" required true><br>
-        <label for ='email'>Email</label><br>
-            <input type = "email" name="email" required true><br>
-        <label for ='message'>Message</label><br>
-            <textarea name= "message" required true></textarea><br>
-        <label for ='submit'></label><br>
-            <button type = 'submit'>Submit</button> <br>
-    </form>
+
+ <div> 
+    <section id="aboutme"> <h2>About</h2> 
+        <p class="about">I'm Manan and I was born in Armenia. After I graduated a law school I realised that I want to work with kids. So I became a teacher. Currently I live in Atlanta, GA.</p>
+        <p>In my leisure time I like reading, especially classic literature and books about children and their psychology. I also enjoy watching movies, playing sports and board games, and I love soccer and basketball.</p> 
+        <p>I would describe myself as a responsible, friendly, positive and open-minded woman. According to my friends I have a good sense of humor. I love making other people laugh and helping them.</p>
+    </section> 
+
+    <section id="myexperience"><h2>Experience</h2> 
+        <p class="experience">I've worked as a teacher for last few years. I've always wanted to try coding, but never really had the chance. Thanks to Code The Dream I have that opportunity now. I started my first coding classes in July, 2022 and I love it!</p>
     </section>
 
-        <section id ='messages'>
-            <h2>Messages</h2>
-            <ul>
+    <section id = "skills"><h2>Skills</h2>
+        <ul class="skillsrow"></ul>
+    </section>
 
-            </ul>
-        </section>
+     <section id="projects"><h2>Projects</h2>
+        <ul></ul>
+    </section>
+</div>
 
-    <footer class="footerBackground"></footer>
+    <!--for social media icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <section id="leaveMessage"><h2>Leave a Message</h2>
+         <form name ='leave_message'>
+            <label for ='name'>Name</label><br>
+                <input type="text" name="name" placeholder="Your name..." required true><br>
+            <label for ='email'>Email</label><br>
+                <input type = "email" name="email" placeholder="Your email..." required true><br>
+            <label for ='message'>Message</label><br>
+                <textarea name= "message" placeholder="Your message..." required true></textarea><br>
+            <label for ='submit'></label><br>
+                <button type = 'submit'>Submit</button> <br>
+        </form>
+    </section>
+
+    <section id ='messages' style="display:none"><h2>Messages</h2>
+            <ul></ul>
+    </section>
+     <div class="mediaFooter">
+        <footer class="footerBackground"></footer>
+        <nav class="mediaNav">
+            <li><a class="media" href="mailto:mail@ghazaryan05.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+            <li><a class="media" href="https://www.instagram.com/man.kazaryan/" target ="_blank"><ion-icon name="logo-instagram"></ion-icon><a></li>
+            <li><a class="media" href="https://github.com/MananGhazaryan" target ="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+        </nav>    
+    </div>
+
    <script src = "js/index.js"></script> 
 </body>
 </html>
